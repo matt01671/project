@@ -28,12 +28,21 @@ public class Project1 {
         
         System.out.println("Please enter initial number of stones");
         int number_of_stones = keyboard.nextInt();
+        
+        stones_left(number_of_stones);
     }
     
     public static String get_player(String name) {
         Scanner keyboard = new Scanner(System.in);
         System.out.printf("Please enter %s's name:%n", name);
         return keyboard.nextLine();
+    }
+    
+    public static void stones_left(int number_of_stones) {
+        System.out.printf("%d stones left: ", number_of_stones);
+        for (int i = 0; i < number_of_stones; i++) {
+            System.out.printf("*");
+        }      
     }
     
 }
